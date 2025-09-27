@@ -10,9 +10,8 @@ body {
     line-height: 2;
 }
 
-/* --- UPDATED NAVBAR STYLES: Dimming Hover Effect --- */
+/* --- NAVBAR STYLES --- */
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -25,13 +24,11 @@ body {
 }
 
 
-/* Color Variables (Keep these) */
 :root {
     --dark-brown: #5C3317; /* Pop Out Color */
     --light-brown: #A9927B; /* Dimmed Color */
 }
 
-/* (Keep .navbar and .navbar .logo styles as they were) */
 .navbar {
     background: transparent;
     color: var(--dark-brown);
@@ -63,45 +60,37 @@ body {
 
 .nav-links li a {
     text-decoration: none;
-    color: var(--dark-brown); /* Default: Dark Brown */
+    color: var(--dark-brown); 
     font-weight: bold;
     font-size: 14px;
     padding-bottom: 2px;
     position: relative;
     text-transform: uppercase;
-    /* Base border is transparent */
     border-bottom: 2px solid transparent; 
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-links li a.active {
     color: var(--dark-brown);
-    border-bottom: 2px solid var(--dark-brown); /* Ensures no underlines are visible by default during hover */
-
+    border-bottom: 2px solid var(--dark-brown); 
 }
 
 .nav-links:hover li a {
     color: var(--light-brown);
-    border-bottom: 2px solid transparent; /* Ensures no underlines are visible by default during hover */
+    border-bottom: 2px solid transparent; 
 }
 
 
 .nav-links:hover li a.active {
-    color: var(--light-brown); /* Re-states light brown for clarity/safety */
-    border-bottom: 2px solid var(--light-brown); /* The underline only appears here! */
+    color: var(--dark-brown); 
+    border-bottom: 2px solid var(--dark-brown); 
 }
 
 .nav-links li a:hover {
     color: var(--dark-brown);
 }
 
-.nav-links li a:hover,
-.nav-links li a.active:hover {
-    border-bottom: 2px solid transparent; /* Crucial: No underline when HOVERING a link */
-}
 
-
-/* Padding to prevent main content from being hidden by fixed navbar */
 main {
     padding-top: 70px;
 }
@@ -314,7 +303,7 @@ footer {
     margin: 1.5rem 0 1rem 0;
     color: white;
     /* NEW: Narrower line spacing */
-    line-height: 1; 
+    line-height: ; 
 }
 
 .airnest-content p {
