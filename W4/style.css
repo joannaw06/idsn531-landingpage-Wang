@@ -70,25 +70,39 @@ body {
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
+/* --- NAVBAR STYLES --- */
+
+/* 1. Active Link Default (When NOT hovering anything) */
 .nav-links li a.active {
-    color: var(--dark-brown);
-    border-bottom: 2px solid var(--dark-brown); 
+color: var(--dark-brown);
+border-bottom: 2px solid var(--dark-brown); /* Bright color, bright underline */
 }
 
+/* 2. Dim ALL Links when hovering the ENTIRE nav container (.nav-links) */
 .nav-links:hover li a {
-    color: var(--light-brown);
-    border-bottom: 2px solid transparent; 
+color: var(--light-brown);
+border-bottom: 2px solid transparent; /* No underline on all links */
 }
 
 
+/* 3. Special Case: When hovering the CONTAINER, the ACTIVE link should become dim with a dim underline */
 .nav-links:hover li a.active {
-    color: var(--dark-brown); 
-    border-bottom: 2px solid var(--dark-brown); 
+color: var(--light-brown); /* Becomes dim (light brown) */
+border-bottom: 2px solid var(--light-brown); /* Gets a dim underline */
 }
 
+/* 4. Pop-Out: When hovering DIRECTLY over ANY link (including the active one), it pops out to bright dark brown */
 .nav-links li a:hover {
-    color: var(--dark-brown);
+color: var(--dark-brown); /* Pop-out bright color */
+border-bottom: 2px solid transparent; /* No underline (This prevents the underline from flickering) */
 }
+
+/* 5. FIX: Ensure the Active link returns to BRIGHT when specifically hovered */
+.nav-links li a.active:hover {
+color: var(--dark-brown); 
+border-bottom: 2px solid var(--dark-brown); /* Restores bright underline */
+}
+
 
 
 main {
