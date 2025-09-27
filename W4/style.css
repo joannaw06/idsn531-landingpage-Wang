@@ -1,0 +1,363 @@
+/* Reset - (Original) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "San Francisco", "Helvetica", sans-serif;
+    line-height: 2;
+}
+
+/* --- UPDATED NAVBAR STYLES: Dimming Hover Effect --- */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "San Francisco", "Helvetica", sans-serif;
+  line-height: 2;
+}
+
+
+/* Color Variables (Keep these) */
+:root {
+    --dark-brown: #5C3317; /* Pop Out Color */
+    --light-brown: #A9927B; /* Dimmed Color */
+}
+
+/* (Keep .navbar and .navbar .logo styles as they were) */
+.navbar {
+    background: transparent;
+    color: var(--dark-brown);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-family: "San Francisco", "Helvetica", sans-serif;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar .logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-brown);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--dark-brown); /* Default: Dark Brown */
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 2px;
+    position: relative;
+    text-transform: uppercase;
+    /* Base border is transparent */
+    border-bottom: 2px solid transparent; 
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-links li a.active {
+    color: var(--dark-brown);
+    border-bottom: 2px solid var(--dark-brown); /* Ensures no underlines are visible by default during hover */
+
+}
+
+.nav-links:hover li a {
+    color: var(--light-brown);
+    border-bottom: 2px solid transparent; /* Ensures no underlines are visible by default during hover */
+}
+
+
+.nav-links:hover li a.active {
+    color: var(--light-brown); /* Re-states light brown for clarity/safety */
+    border-bottom: 2px solid var(--light-brown); /* The underline only appears here! */
+}
+
+.nav-links li a:hover {
+    color: var(--dark-brown);
+}
+
+.nav-links li a:hover,
+.nav-links li a.active:hover {
+    border-bottom: 2px solid transparent; /* Crucial: No underline when HOVERING a link */
+}
+
+
+/* Padding to prevent main content from being hidden by fixed navbar */
+main {
+    padding-top: 70px;
+}
+/* --- END FINAL NAVBAR STYLES --- */
+
+
+
+section.intro {
+    min-height: 100vh;
+    padding: 150px 50px;
+}
+
+/* Intro styling */
+.intro {
+    text-align: left;
+    background-image: url(images/cover-w-pt.jpg);
+    background-size: 100% 100%;
+}
+
+.intro h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.intro h2,
+.intro img,
+.intro p {
+    margin-bottom: 20px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.selfintro {
+    background-color: white;
+    font-size: 20px;
+    color: #1e1e1e;
+    line-height: 10px;
+}
+
+.black-link {
+    color: black;
+}
+
+.white-link {
+    color: white;
+    font-weight: bold;
+}
+
+/* Start-Up Page Styles (Renamed from contact-content) */
+.content-container { /* Applied this to main in start-up.html for generic styling */
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.content-container h1 {
+    font-size: 32px;
+    margin-bottom: 1rem;
+}
+
+.startup-info {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+}
+
+.startup-info h2 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+
+/* Projects Grid Layout */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Each work box */
+.work {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+/* Work image zoom effect */
+.work img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.work img:hover {
+    transform: scale(1.05);
+}
+
+/* Work caption & description */
+.caption {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.description {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: transparent;
+    color: #555;
+}
+
+
+.work a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- NEW: FULL-SCREEN AIRNEST LANDING PAGE STYLES --- */
+
+/* The main container for the full-screen view */
+.airnest-page {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /* Use a fixed, dark green background color as a base */
+    background-color: #388E3C;
+    overflow: hidden; /* Hide any scrolling */
+    color: white;
+}
+
+/* Background Image Layer (Top half of the screen) */
+.airnest-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/airnest-mockup-top.png'); /* Placeholder for the upper, nature image */
+    background-size: cover;
+    background-position: center top;
+    
+    /* This creates the dark green fade over the image */
+    background-blend-mode: multiply;
+    background-color: rgba(56, 142, 60, 0.1); /* Darker green overlay: #388E3C with 40% opacity */
+}
+
+/* Gradient Overlay to transition from image to solid green */
+.airnest-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient from transparent to solid dark green (#388E3C) */
+    background: linear-gradient(
+        to bottom,
+        rgba(56, 142, 60, 0) 0%, /* Start fully transparent */
+        rgba(56, 142, 60, 0.4) 60%, /* Fade in the green */
+        #388E3C 75% /* Become solid green towards the bottom */
+    );
+}
+
+/* Content Placement (Bottom-left area in the mockup) */
+.airnest-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 50px 80px 50px; /* Padding for alignment */
+    z-index: 5;
+}
+
+/* Logo and Title Styling */
+.airnest-logo-and-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.airnest-logo-svg {
+    width: 32px; /* Icon size */
+    height: 32px;
+    margin-right: 15px;
+    fill: white; 
+}
+
+.airnest-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Subheadings and body text */
+.airnest-content h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 1.5rem 0 1rem 0;
+    color: white;
+}
+
+.airnest-content p {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+    color: white;
+    max-width: 650px;
+}
+
+/* Small footer text (Forbes competition) */
+.airnest-footer-text {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    text-align: right;
+    font-size: 12px;
+    line-height: 1.4;
+    font-style: italic;
+    color: white;
+    max-width: 250px;
+    z-index: 5; /* Ensure it's above the background layers */
+}
+
+.airnest-footer-text strong {
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Hiding the standard footer and content container on this specific page */
+.content-container { 
+    display: none; 
+}
+
+footer {
+    display: none; 
+}
