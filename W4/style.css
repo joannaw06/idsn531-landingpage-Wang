@@ -298,33 +298,23 @@ footer {
 }
 
 /* Logo and Title Styling */
-.airnest-logo-and-title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.airnest-logo-svg {
-    width: 32px; /* Icon size */
-    height: 32px;
+.airnest-logo-png {
+    width: 300px; 
+    height: auto;
     margin-right: 15px;
-    fill: white; 
 }
 
 .airnest-content h1 {
-    font-size: 48px;
-    font-weight: 700;
-    color: white;
-    margin: 0;
-    line-height: 1;
-}
+/* ... rest of h1 styles ... */
 
-/* Subheadings and body text */
+
 .airnest-content h2 {
     font-size: 24px;
     font-weight: 500;
     margin: 1.5rem 0 1rem 0;
     color: white;
+    /* NEW: Narrower line spacing */
+    line-height: 1; 
 }
 
 .airnest-content p {
