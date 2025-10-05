@@ -341,14 +341,13 @@ footer {
     display: none; 
 }
 
-/* --- Global Reset and Custom Variables --- */
-/* --- Global Reset and Custom Variables --- */
-/* --- Global Reset and Custom Variables --- */
-/* --- Contact Page Specific Styles (Dark Theme and Form Interactions) --- */
+/* --- Contact Page Specific Styles --- */
+/* --- Contact Page Specific Styles --- */
+/* --- Contact Page Specific Styles --- */
+/* --- Contact Page Specific Styles --- */
+/* --- Contact Page Specific Styles --- */
 
-/* Color Variables used specifically by the contact page for CSS styling */
 :root {
-    /* Mapped from Tailwind config in contact.html for CSS elements */
     --dark-text: #f0f0f0; 
     --dark-accent: #007bff; /* Blue accent for numbers */
     --dark-placeholder: #707070; /* Dim gray for helper text */
@@ -361,11 +360,9 @@ footer {
 
 /* --- Layout and Structural Fixes --- */
 .container {
-    /* Padding to account for the fixed navbar (from style.css) */
     padding-top: 120px; 
 }
 
-/* Ensures the header line uses the dark border color */
 .page-header {
     border-bottom: 1px solid var(--dark-border); 
 }
@@ -381,7 +378,6 @@ footer {
 
 /* --- Form Input Styles --- */
 
-/* General input styling (text, email, organization) */
 .form-input {
     width: 100%;
     /* FIX: Set transparent border to reserve space for focus state, preventing jump */
