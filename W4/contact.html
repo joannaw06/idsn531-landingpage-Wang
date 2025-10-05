@@ -4,19 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AirNest – Sustainable Design Startup</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Contact – Joanna Wang</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        // Minimal config to define custom colors and font used in the HTML
+        // NOTE: In a real-world scenario, you would use a build tool (like PostCSS)
+        // to pre-process Tailwind, avoiding the need for this script tag.
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-bg': '#1a1a1a',
+                        'dark-text': '#f0f0f0',
+                        'dark-accent': '#007bff',
+                        'dark-placeholder': '#707070',
+                        'dark-border': '#444444',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <header class="navbar">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">HOME</a></li>
-                <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
-                <li><a href="start-up.html" class="nav-link">START-UP</a></li>
-                <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+<body class="bg-dark-bg text-dark-text font-sans">
 
+    <header class="navbar bg-dark-bg text-dark-text fixed top-0 left-0 right-0 z-1000">
+        <nav class="flex justify-center w-full">
+            <ul class="nav-links"> 
+                <li><a href="index.html" class="nav-link text-dark-text hover:text-dark-text">HOME</a></li>
+                <li><a href="projects.html" class="nav-link text-dark-text hover:text-dark-text">PROJECTS</a></li>
+                <li><a href="start-up.html" class="nav-link text-dark-text hover:text-dark-text">START-UP</a></li>
+                <li><a href="contact.html" class="nav-link active text-dark-text hover:text-dark-text">CONTACT</a></li>
             </ul>
         </nav>
     </header>
+
+
+    <div class="container max-w-6xl mx-auto px-6 lg:px-10">
+
+        <header class="flex justify-between items-center py-16 border-b border-dark-border mb-12">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight max-w-4xl">Let's start a project together</h1>
+            <div class="profile-pic flex-shrink-0">
+                <img src="https://placehold.co/60x60/333333/f0f0f0?text=JW" alt="Profile Picture" class="w-16 h-16 rounded-full object-cover">
+            </div>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 pb-20">
+
+            <div class="form-section lg:col-span-2">
+                <form id="contactForm" action="#" method="POST" class="space-y-10">
+
+                    <div class="form-group">
+                        <label for="name" class="block text-lg font-semibold mb-2">
+                            <span class="number text-dark-accent mr-3">01</span> What's your name?
+                        </label>
+                        <input type="text" id="name" name="name"
+                                class="form-input text-2xl font-semibold bg-transparent"
+                               placeholder="John Doe *"
+                               required
+                               minlength="2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="block text-lg font-semibold mb-2">
+                            <span class="number text-dark-accent mr-3">02</span> What's your email?
+                        </label>
+                        <input type="email" id="email" name="email"
+                                class="form-input text-2xl font-semibold bg-transparent"
+                               placeholder="john@doe.com *"
+                               required
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="organization" class="block text-lg font-semibold mb-2">
+                            <span class="number text-dark-accent mr-3">03</span> What's the name of your organisation?
+                        </label>
+                        <input type="text" id="organization" name="organization"
+                                class="form-input text-2xl font-semibold bg-transparent"
+                               placeholder="John & Doe ®">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="block text-lg font-semibold mb-2">
+                            <span class="number text-dark-accent mr-3">04</span> Tell us about your project.
+                        </label>
+                        <textarea
+                            class="single-line-textarea text-2xl font-semibold bg-transparent"
+                            id="message"
+                            name="message"
+                            rows="1"
+                            placeholder="Type your message here..."
+                            required
+                            minlength="10"></textarea>
+                    </div>
+
+                    <button type="submit" class="bg-dark-text text-dark-bg px-8 py-4 rounded-lg font-bold text-lg hover:bg-white transition duration-300">Send Message</button>
+
+                </form>
+            </div>
+
+            <aside class="details-section lg:col-span-1 space-y-10 lg:pt-2">
+
+                <div class="contact-details">
+                    <h3 class="text-xs text-dark-placeholder uppercase font-extrabold tracking-widest mb-3">CONTACT DETAILS</h3>
+                    <p><a href="mailto:joanna@email.com" class="text-dark-text hover:text-dark-placeholder transition">joanna@email.com</a></p>
+                    <p><a href="tel:+15551234567" class="text-dark-text hover:text-dark-placeholder transition">+1 555 123 4567</a></p>
+                </div>
+
+                <div class="business-details">
+                    <h3 class="text-xs text-dark-placeholder uppercase font-extrabold tracking-widest mb-3">BUSINESS DETAILS</h3>
+                    <p class="text-dark-text">Location: Los Angeles, CA</p>
+                </div>
+
+                <div class="socials">
+                    <h3 class="text-xs text-dark-placeholder uppercase font-extrabold tracking-widest mb-3">SOCIALS</h3>
+                    <p><a href="https://www.linkedin.com/in/joanna-wang-312a3a381/" target="_blank" class="text-dark-text hover:text-dark-placeholder transition">LinkedIn</a></p>
+                    <p><a href="#" class="text-dark-text hover:text-dark-placeholder transition">Instagram</a></p>
+                    <p><a href="#" class="text-dark-text hover:text-dark-placeholder transition">Dribbble</a></p>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="text-center py-6 text-dark-placeholder border-t border-dark-border mt-10">
+            <p>© 2025 Joanna Wang</p>
+        </footer>
+    </div>
+
+</body>
+</html>
