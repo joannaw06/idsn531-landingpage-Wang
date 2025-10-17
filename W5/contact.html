@@ -22,11 +22,11 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'dark-bg': '#1a1a1a',
-                        'dark-text': '#f0f0f0',
-                        'dark-accent': '#007bff',
-                        'dark-placeholder': '#707070',
-                        'dark-border': '#444444',
+                        'light-bg': '#dcd3c4',       
+                        'light-text': '#2c2c2c',     
+                        'light-accent': '#007bff',   // Blue accent
+                        'light-placeholder': '#a0a0a0', 
+                        'light-border': '#cccccc',   
                     }
                 }
             }
@@ -34,9 +34,9 @@
     </script>
 </head>
 
-<body class="bg-dark-bg text-dark-text font-sans">
+<body class="bg-light-bg text-light-text font-sans">
 
-    <header class="navbar bg-dark-bg text-dark-text fixed top-0 left-0 right-0 z-1000">
+    <header class="navbar bg-light-bg text-light-text fixed top-0 left-0 right-0 z-1000">
         <nav class="flex justify-center w-full">
             <ul class="nav-links"> 
                 <li><a href="index.html" class="nav-link">HOME</a></li>
@@ -50,10 +50,10 @@
 
     <div class="container max-w-6xl mx-auto px-6 lg:px-10">
 
-        <header class="flex justify-between items-center py-16 border-b border-dark-border mb-12">
+        <header class="flex justify-between items-center py-16 border-b border-light-border mb-12">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight max-w-4xl">Let's start a project together</h1>
             <div class="profile-pic flex-shrink-0">
-                <img src="https://placehold.co/60x60/333333/f0f0f0?text=JW" alt="Profile Picture" class="w-16 h-16 rounded-full object-cover">
+                <img src="https://placehold.co/60x60/cccccc/2c2c2c?text=JW" alt="Profile Picture" class="w-16 h-16 rounded-full object-cover">
             </div>
         </header>
 
@@ -64,7 +64,7 @@
 
                     <div class="form-group">
                         <label for="name" class="block text-lg font-semibold mb-2">
-                            <span class="number text-dark-accent mr-3">01</span> What's your name?
+                            <span class="number text-light-accent mr-3">01</span> What's your name?
                         </label>
                         <input type="text" id="name" name="name"
                                 class="form-input text-2xl font-semibold bg-transparent"
@@ -75,7 +75,7 @@
 
                     <div class="form-group">
                         <label for="email" class="block text-lg font-semibold mb-2">
-                            <span class="number text-dark-accent mr-3">02</span> What's your email?
+                            <span class="number text-light-accent mr-3">02</span> What's your email?
                         </label>
                         <input type="email" id="email" name="email"
                                 class="form-input text-2xl font-semibold bg-transparent"
@@ -86,7 +86,7 @@
 
                     <div class="form-group">
                         <label for="organization" class="block text-lg font-semibold mb-2">
-                            <span class="number text-dark-accent mr-3">03</span> What's the name of your organisation?
+                            <span class="number text-light-accent mr-3">03</span> What's the name of your organization?
                         </label>
                         <input type="text" id="organization" name="organization"
                                 class="form-input text-2xl font-semibold bg-transparent"
@@ -95,7 +95,7 @@
 
                     <div class="form-group">
                         <label for="message" class="block text-lg font-semibold mb-2">
-                            <span class="number text-dark-accent mr-3">04</span> Tell us about your project.
+                            <span class="number text-light-accent mr-3">04</span> Tell us about your project.
                         </label>
                         <textarea
                             class="single-line-textarea text-2xl font-semibold bg-transparent"
@@ -107,34 +107,33 @@
                             minlength="10"></textarea>
                     </div>
 
-                    <button type="submit" class="bg-dark-text text-dark-bg px-8 py-4 rounded-lg font-bold text-lg hover:bg-white transition duration-300">Send Message</button>
+                    <button type="submit" class="bg-light-text text-light-bg px-8 py-4 rounded-lg font-bold text-lg hover:bg-black hover:text-white transition duration-300 submit-button">Send Message</button>
 
                 </form>
             </div>
 
-            <aside class="details-section lg:col-span-1 space-y-10 lg:pt-2">
+<aside class="details-section lg:col-span-1 space-y-10 lg:pt-2">
 
                 <div class="contact-details">
-                    <h3 class="text-xs text-dark-placeholder uppercase font-extrabold tracking-widest mb-3">CONTACT DETAILS</h3>
-                    <p><a href="mailto:joanna@email.com" class="text-dark-text hover:text-dark-placeholder transition">joanna@email.com</a></p>
-                    <p><a href="tel:+15551234567" class="text-dark-text hover:text-dark-placeholder transition">+1 555 123 4567</a></p>
+                    <h3 class="text-xs text-light-placeholder uppercase font-extrabold tracking-widest mb-3">CONTACT DETAILS</h3>
+                    <p class="text-light-text">joannajyw06@gmail.com</p>
+                    <p class="text-light-text">+1 650 888 6518</p>
                 </div>
 
                 <div class="business-details">
-                    <h3 class="text-xs text-dark-placeholder uppercase font-extrabold tracking-widest mb-3">BUSINESS DETAILS</h3>
-                    <p class="text-dark-text">Location: Los Angeles, CA</p>
+                    <h3 class="text-xs text-light-placeholder uppercase font-extrabold tracking-widest mb-3">BUSINESS DETAILS</h3>
+                    <p class="text-light-text">Location: Los Angeles, CA</p>
                 </div>
 
                 <div class="socials">
-                    <h3 class="text-xs text-dark-placeholder uppercase font-extrabold tracking-widest mb-3">SOCIALS</h3>
-                    <p><a href="https://www.linkedin.com/in/joanna-wang-312a3a381/" target="_blank" class="text-dark-text hover:text-dark-placeholder transition">LinkedIn</a></p>
-                    <p><a href="#" class="text-dark-text hover:text-dark-placeholder transition">Instagram</a></p>
-                    <p><a href="#" class="text-dark-text hover:text-dark-placeholder transition">Dribbble</a></p>
+                    <h3 class="text-xs text-light-placeholder uppercase font-extrabold tracking-widest mb-3">SOCIALS</h3>
+                    <p><a href="https://www.linkedin.com/in/joanna-wang-312a3a381/" target="_blank" class="text-light-text hover:text-light-placeholder transition">LinkedIn</a></p>
+                    <p><a href="#" class="text-light-text hover:text-light-placeholder transition">Instagram</a></p>
                 </div>
             </aside>
         </main>
 
-        <footer class="text-center py-6 text-dark-placeholder border-t border-dark-border mt-10">
+        <footer class="text-center py-6 text-light-placeholder border-t border-light-border mt-10">
             <p>© 2025 Joanna Wang</p>
         </footer>
     </div>

@@ -29,6 +29,38 @@ body {
     --light-brown: #A9927B; /* Dimmed Color */
 }
 
+/* --- Navigation Bar Styles --- */
+
+.navbar {
+    width: 100%;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    max-width: 1280px; /* Or whatever your container max-width is */
+    margin: 0 auto;
+    padding: 0 2rem; /* Add horizontal padding */
+    min-height: 80px; /* Example height */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--light-text); 
+    transition: color 0.3s;
+}
+
+*/
+
 .navbar {
     background: transparent;
     color: var(--dark-brown);
@@ -348,26 +380,30 @@ footer {
 /* --- Contact Page Specific Styles --- */
 
 :root {
-    --dark-text: #f0f0f0; 
-    --dark-accent: #007bff; /* Blue accent for numbers */
-    --dark-placeholder: #707070; /* Dim gray for helper text */
-    --dark-border: #444444; /* Dark border lines */
+    --light-background: #dcd3c4; 
+    --light-text: #2c2c2c;
+    --light-accent: #007bff; 
+    --light-placeholder: #a0a0a0; 
+    --light-border: #cccccc; 
     
-    /* Form specific colors */
-    --form-border-unfocused: var(--dark-border); 
-    --form-border-focused: var(--dark-text); 
+    /* Form specific colors - using light mode vars */
+    --form-border-unfocused: var(--light-border); 
+    --form-border-focused: var(--light-text); 
 }
 
-/* --- Layout and Structural Fixes --- */
+body {
+    background-color: var(--light-background);
+    color: var(--light-text);
+}
+
 .container {
     padding-top: 120px; 
 }
 
 .page-header {
-    border-bottom: 1px solid var(--dark-border); 
+    border-bottom: 1px solid var(--light-border); 
 }
 
-/* Responsive grid for main content (Form 2/3, Details 1/3) */
 @media (min-width: 1024px) { /* lg breakpoint */
     .main-content {
         display: grid;
@@ -380,34 +416,28 @@ footer {
 
 .form-input {
     width: 100%;
-    /* FIX: Set transparent border to reserve space for focus state, preventing jump */
     border: 1px solid transparent; 
     border-bottom: 1px solid var(--form-border-unfocused); 
-    /* FIX: Set padding equal to the focus state to prevent content shift */
     padding: 0.75rem 1rem; 
-    color: var(--dark-text); 
+    color: var(--light-text); 
     background-color: transparent;
     transition: all 0.3s ease;
     outline: none;
     font-family: 'Inter', sans-serif;
 }
 
-/* Focus state for standard inputs: Applies the full box style */
 .form-input:focus {
     border-color: var(--form-border-focused);
     border-radius: 6px;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
-/* Textarea Styling: Single-line default state */
 .single-line-textarea {
     width: 100%;
-    /* FIX: Set transparent border to reserve space for focus state, preventing jump */
     border: 1px solid transparent; 
     border-bottom: 1px solid var(--form-border-unfocused); 
-    /* FIX: Set padding equal to the focus state to prevent content shift */
     padding: 1rem; 
-    color: var(--dark-text);
+    color: var(--light-text);
     background-color: transparent;
     outline: none;
     resize: none; 
@@ -417,19 +447,17 @@ footer {
     font-family: 'Inter', sans-serif;
 }
 
-/* Textarea Focus State: Expands to a multi-line box */
 .single-line-textarea:focus {
     border-color: var(--form-border-focused);
     border-radius: 6px;
     min-height: 10rem; 
     overflow-y: auto; 
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
-/* Placeholders */
 .form-input::placeholder,
 .single-line-textarea::placeholder {
-    color: var(--dark-placeholder);
+    color: var(--light-placeholder);
     font-weight: 400;
 }
 
@@ -450,10 +478,10 @@ footer {
 
 .details-section a {
     text-decoration: none;
+    color: var(--light-accent); 
     transition: color 0.2s;
 }
 
-/* Footer border for dark mode */
 footer {
-    border-top: 1px solid var(--dark-border);
+    border-top: 1px solid var(--light-border);
 }
