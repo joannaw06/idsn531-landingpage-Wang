@@ -7,6 +7,7 @@
 body {
     font-family: "San Francisco", "Helvetica", sans-serif;
     line-height: 2;
+    overflow-y: scroll; /* This makes the scrollbar gutter always visible */
 }
 
 /* --- NAVBAR STYLES --- */
@@ -31,17 +32,18 @@ body {
     right: 0;
     z-index: 1000;
     display: flex;
-    justify-content: flex-start; 
+    justify-content: center; 
     align-items: center;
     padding: 20px 40px;
 }
 
-.nav-links {
+.navbar .nav-links {
     list-style: none;
     display: flex;
     gap: 4rem;
+    margin: 0;
+    padding: 0;
 }
-
 .nav-links li a {
     text-decoration: none;
     color: var(--dark-brown); 
@@ -86,25 +88,49 @@ color: var(--dark-brown);
 border-bottom: 2px solid var(--dark-brown);
 }
 
+/* --- START-UP PAGE NAVBAR OVERRIDE --- */
+
+.startup-page .nav-links li a {
+    color: var(--light-brown);
+}
+
+.startup-page .nav-links li a.active {
+    color: var(--light-brown);
+    border-bottom-color: var(--light-brown);
+}
+
+.startup-page .nav-links:hover li a {
+    color: rgba(231, 231, 231, 0.5); /* 50% white */
+}
+
+.startup-page .nav-links:hover li a.active {
+    color: rgba(231, 231, 231, 0.5);
+    border-bottom-color: rgba(231, 231, 231, 0.5);
+}
+
+.startup-page .nav-links li a:hover,
+.startup-page .nav-links li a.active:hover {
+    color: var(--light-brown);
+    border-bottom-color: var(--light-brown);
+}
+
 main {
     padding-top: 0px;
 }
 /* --- END FINAL NAVBAR STYLES --- */
 
 
-
 section.intro {
     min-height: 100vh;
-    padding: 150px 50px;
+    /* padding is removed */
 }
 
-/* Intro styling */
 .intro {
     text-align: left;
     background-image: url(images/home.jpg);
-    background-size: 100% 100%;
+    background-size: cover; /* 'cover' prevents distortion */
+    background-position: center; /* Centers the image */
 }
-
 .intro h1 {
     font-size: 20px;
     margin-bottom: 20px;
@@ -133,7 +159,7 @@ section.intro {
 }
 
 .white-link {
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
@@ -164,12 +190,13 @@ section.intro {
 
 
 /* Projects Grid Layout */
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 100px 2rem 2rem 2rem; 
 }
 
 /* Each work box */
@@ -337,7 +364,7 @@ footer {
 
 
 .container {
-    padding-top: 120px; 
+    padding-top: 100px; 
 }
 
 .page-header {
@@ -419,8 +446,4 @@ footer {
     text-decoration: none;
     color: var(--light-accent); 
     transition: color 0.2s;
-}
-
-footer {
-    border-top: 1px solid var(--light-border);
 }
