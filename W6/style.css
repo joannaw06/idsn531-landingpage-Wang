@@ -14,8 +14,8 @@ body {
 /* --- NAVBAR STYLES --- */
 
 :root {
-    --dark-brown: #2e2b2a; /* Pop Out Color */
-    --light-brown: #e7e7e7; /* Dimmed Color */
+    --dark-brown: #2e2b2a;
+    --light-brown: #e7e7e7;/
 }
 
 .navbar {
@@ -67,19 +67,19 @@ border-bottom: 2px solid var(--dark-brown);
 /* 2. Dim ALL Links when hovering the ENTIRE nav container (.nav-links) */
 .nav-links:hover li a {
 color: var(--light-brown);
-border-bottom: 2px solid transparent; /* No underline on all links */
+border-bottom: 2px solid transparent; 
 }
 
 
 /* 3. Special Case: When hovering the CONTAINER, the ACTIVE link should become dim with a dim underline */
 .nav-links:hover li a.active {
 color: var(--light-brown); /* Becomes dim (light brown) */
-border-bottom: 2px solid var(--light-brown); /* Gets a dim underline */
+border-bottom: 2px solid var(--light-brown); 
 }
 
 /* 4. Pop-Out: When hovering DIRECTLY over ANY link (including the active one), it pops out to bright dark brown */
 .nav-links li a:hover {
-color: var(--dark-brown); /* Pop-out bright color */
+color: var(--dark-brown); 
 border-bottom: 2px solid transparent; 
 }
 
@@ -141,7 +141,7 @@ section.intro {
 .intro h2,
 .intro img,
 .intro p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .name {
