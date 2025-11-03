@@ -11,11 +11,12 @@ body {
     color: #333; 
     overflow-y: scroll;
 }
+
 /* --- NAVBAR STYLES --- */
 
 :root {
     --dark-brown: #2e2b2a;
-    --light-brown: #e7e7e7;/
+    --light-brown: #e7e7e7;
 }
 
 .navbar {
@@ -681,4 +682,38 @@ h3,
 .name,
 .caption {
     font-family: 'DM Serif Text', serif;
+}
+
+/* --- NEW: Interactive Experience Card Styles --- */
+
+.experience .entry {
+    padding: 20px;
+    border-radius: 8px; 
+    
+    border: 1px solid transparent;
+    
+    transition: all 0.3s ease-in-out;
+}
+
+.experience-hovered {
+    transform: translateY(-5px);
+    background-color: #ffffff;
+    border-color: #e0e0e0; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+/* --- 1. Interactive Tag Styles --- */
+
+.tool-list span,
+.hobby-list span {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.tag-hovered {
+    transform: scale(1.1);
+    background-color: var(--dark-brown) !important; 
+    color: #F3F3F2 !important; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
