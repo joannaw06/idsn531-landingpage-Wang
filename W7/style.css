@@ -717,3 +717,76 @@ h3,
     color: #F3F3F2 !important; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* --- NEW: Project Mini-Slider Styles --- */
+
+.project-image-slider {
+    position: relative; /* Essential for positioning the buttons */
+    overflow: hidden; /* This now clips the "filmstrip" */
+    border-radius: 0; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* NEW: This is the "filmstrip" that holds the images */
+.slider-filmstrip {
+    display: flex;
+    /* This transition is what makes the "swipe" smooth */
+    transition: transform 0.4s ease-in-out; 
+}
+
+/* 1. All images are now visible, side-by-side in the flex container */
+.slider-image {
+    width: 100%;    /* Each image takes 100% of the container width */
+    height: auto;
+    flex-shrink: 0; /* Prevents images from shrinking */
+    display: block; /* Removed display:none */
+    box-shadow: none; /* Shadow is now on the main container */
+    border-radius: 0;
+}
+
+/* 2. REMOVED the :first-child rule, as it's no longer needed */
+
+
+/* 3. Style the slider buttons (no change from before) */
+.project-slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    
+    color: var(--dark-brown);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+/* 4. Show buttons when hovering the main image container (no change) */
+.project-image-slider:hover .project-slider-btn {
+    opacity: 1;
+}
+
+.project-slider-btn:hover {
+    background-color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.project-prev-btn {
+    left: 15px;
+}
+
+.project-next-btn {
+    right: 15px;
+}
