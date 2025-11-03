@@ -54,9 +54,15 @@
             </div>
         </header>
 
-        <main class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 pb-20">
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 pb-20">
 
             <div class="form-section lg:col-span-2">
+                
+                <div id="form-success" style="display: none;">
+                    <h2 class="text-3xl font-bold text-green-700">Thank you!</h2>
+                    <p class="text-xl text-light-text mt-4">Your message has been sent successfully. I'll get back to you soon.</p>
+                </div>
+
                 <form id="contactForm" action="#" method="POST" class="space-y-10">
 
                     <div class="form-group">
@@ -68,6 +74,7 @@
                                placeholder="John Doe *"
                                required
                                minlength="2">
+                        <span class="error-message"></span>
                     </div>
 
                     <div class="form-group">
@@ -79,6 +86,7 @@
                                placeholder="john@doe.com *"
                                required
                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <span class="error-message"></span>
                     </div>
 
                     <div class="form-group">
@@ -88,7 +96,7 @@
                         <input type="text" id="organization" name="organization"
                                 class="form-input text-2xl font-semibold bg-transparent"
                                placeholder="John & Doe ®">
-                    </div>
+                        </div>
 
                     <div class="form-group">
                         <label for="message" class="block text-lg font-semibold mb-2">
@@ -102,6 +110,7 @@
                             placeholder="Type your message here..."
                             required
                             minlength="10"></textarea>
+                        <span class="error-message"></span>
                     </div>
 
                     <button type="submit" class="bg-light-text text-light-bg px-8 py-4 rounded-lg font-bold text-lg hover:bg-black hover:text-white transition duration-300 submit-button">Send Message</button>
@@ -134,5 +143,10 @@
         </footer>
         
     </div>
-</main></body>
+</main>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</body>
 </html>
