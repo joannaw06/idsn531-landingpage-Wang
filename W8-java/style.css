@@ -809,76 +809,7 @@ h3,
     border-bottom-color: #D32F2F !important; 
 }
 
-/* --- NEW: Responsive Navbar Styles --- */
-
-#hamburger-btn {
-    display: none; 
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-#hamburger-btn span {
-    width: 100%;
-    height: 3px;
-    background-color: var(--dark-brown);
-    border-radius: 2px;
-}
-
-/* On screens 768px or smaller */
-@media (max-width: 668px) {
-    
-    .navbar {
-        justify-content: flex-end; 
-    }
-
-    #hamburger-btn {
-        display: flex; 
-    }
-
-.nav-menu {
-        display: none; 
-        position: absolute;
-        top: 60px; 
-        right: 20px; 
-        width: 250px; 
-        height: auto; 
-        background-color: #F3F3F2; 
-        border-radius: 8px; 
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        
-        /* Stack links */
-        flex-direction: column;
-        align-items: flex-start; 
-        justify-content: flex-start;
-        z-index: 1000;
-    }
-
-    .nav-menu.nav-active {
-        display: flex;
-    }
-    
-    .nav-links {
-        flex-direction: column; 
-        text-align: center;
-        gap: 2rem;
-    }
-
-    .nav-links li a {
-        font-size: 24px; 
-    }
-
-    .startup-page #hamburger-btn span {
-        background-color: var(--light-brown);
-    }
-}
-
-/* --- Responsive Navbar Styles --- */
+/* --- 最终版：响应式导航栏样式 --- */
 
 #hamburger-btn {
     display: none; 
@@ -913,16 +844,20 @@ h3,
     .nav-menu {
         display: none; 
         position: absolute;
-        top: 20px; 
-        right: 10px; 
+        top: 60px; 
+        right: 20px; 
         width: 250px; 
         height: auto; 
-        background-color: #F3F3F2; 
+        background-color: #F3F3F2;
+        border-radius: 8px; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+        
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        z-index: 500;
-        padding: 20px; 
+        z-index: 1000;
+        
+        padding: 10px; 
     }
 
     .nav-menu.nav-active {
@@ -933,7 +868,8 @@ h3,
         flex-direction: column; 
         text-align: left; 
         width: 100%; 
-        gap: 1px; 
+        
+        gap: 2px;
     }
     
     .nav-links li {
@@ -947,6 +883,9 @@ h3,
         display: block; 
         width: 100%;
         border-bottom: none; 
+        background-color: white; 
+        border-radius: 6px; 
+        color: var(--dark-brown);
     }
     
     .nav-links li a:hover {
@@ -954,13 +893,15 @@ h3,
         border-bottom: none;
     }
     
-    .nav-links li a.active {
-        border-bottom: none;
-        font-weight: 700;
-        color: #007bff; 
-    }
 
     .startup-page #hamburger-btn span {
         background-color: var(--light-brown);
+    }
+    .startup-page .nav-menu .nav-links li a {
+        color: var(--dark-brown); 
+    }
+    
+    .startup-page .nav-menu .nav-links li a.active {
+        color:black; 
     }
 }
