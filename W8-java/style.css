@@ -123,15 +123,19 @@ main {
 
 
 section.intro {
-    min-height: 100vh;
+    min-height: 60vh;
     /* padding is removed */
 }
 
 .intro {
     text-align: left;
     background-image: url(images/home.jpg);
-    background-size: cover; /* 'cover' prevents distortion */
-    background-position: center; /* Centers the image */
+    
+    /* NEW CHANGES HERE */
+    background-size: contain;   /* Show the whole image */
+    background-position: center;  /* Keep it centered */
+    background-repeat: no-repeat; /* Do not tile the image */
+    background-color: #F3F3F2;       /* Make the "letterbox" bars black */
 }
 .intro h1 {
     font-size: 20px;
@@ -839,19 +843,21 @@ h3,
         display: flex; /* Show the hamburger button */
     }
 
-    .nav-menu {
+.nav-menu {
         display: none; /* Hide the menu by default */
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh; /* Full screen height */
+        top: 60px; /* Position it below the navbar */
+        right: 20px; /* Position it on the right side */
+        width: 250px; /* Give it a fixed width */
+        height: auto; /* Make height fit the content */
         background-color: #F3F3F2; /* Your light page background */
+        border-radius: 8px; /* Add rounded corners */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Add a nice shadow */
         
-        /* Center the links */
+        /* Stack links */
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start; /* Align links to the left */
+        justify-content: flex-start;
         z-index: 1000;
     }
 
