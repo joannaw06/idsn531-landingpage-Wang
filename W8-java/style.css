@@ -812,7 +812,7 @@ h3,
 /* --- NEW: Responsive Navbar Styles --- */
 
 #hamburger-btn {
-    display: none; /* Hide on desktop */
+    display: none; 
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
@@ -820,7 +820,7 @@ h3,
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 1001; /* Make sure it's on top */
+    z-index: 1001;
 }
 
 #hamburger-btn span {
@@ -830,53 +830,49 @@ h3,
     border-radius: 2px;
 }
 
-/* --- This is the Breakpoint --- */
 /* On screens 768px or smaller */
 @media (max-width: 668px) {
     
     .navbar {
-        /* Make sure button is on the right */
         justify-content: flex-end; 
     }
 
     #hamburger-btn {
-        display: flex; /* Show the hamburger button */
+        display: flex; 
     }
 
 .nav-menu {
-        display: none; /* Hide the menu by default */
+        display: none; 
         position: absolute;
-        top: 60px; /* Position it below the navbar */
-        right: 20px; /* Position it on the right side */
-        width: 250px; /* Give it a fixed width */
-        height: auto; /* Make height fit the content */
-        background-color: #F3F3F2; /* Your light page background */
-        border-radius: 8px; /* Add rounded corners */
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Add a nice shadow */
+        top: 60px; 
+        right: 20px; 
+        width: 250px; 
+        height: auto; 
+        background-color: #F3F3F2; 
+        border-radius: 8px; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         
         /* Stack links */
         flex-direction: column;
-        align-items: flex-start; /* Align links to the left */
+        align-items: flex-start; 
         justify-content: flex-start;
         z-index: 1000;
     }
 
-    /* This class is added by jQuery to show the menu */
     .nav-menu.nav-active {
         display: flex;
     }
     
     .nav-links {
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: column; 
         text-align: center;
         gap: 2rem;
     }
 
     .nav-links li a {
-        font-size: 24px; /* Make links bigger and easier to tap */
+        font-size: 24px; 
     }
 
-    /* On startup page, make hamburger lines light */
     .startup-page #hamburger-btn span {
         background-color: var(--light-brown);
     }
