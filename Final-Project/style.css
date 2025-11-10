@@ -122,20 +122,39 @@ main {
 /* --- END FINAL NAVBAR STYLES --- */
 
 
+/* --- CHANGED (Lines 134-138) --- */
 section.intro {
     min-height: 100vh;
-    /* padding is removed */
+    position: relative; /* <-- ADDED: To contain the ::before element */
+    overflow: hidden;   /* <-- ADDED: Hides overflow on desktop */
 }
 
+/* --- CHANGED (Lines 140-147) --- */
 .intro {
     text-align: left;
-    background-image: url(images/home.jpg);
-    
-    /* NEW CHANGES HERE */
-    background-size: cover;   /* Show the whole image */
-    background-position: center;  /* Keep it centered */
-    background-repeat: no-repeat; /* Do not tile the image */
+    /* All background-image properties have been
+       REMOVED from here and moved to .intro::before
+    */
 }
+
+/* --- NEW RULE (Lines 149-164) --- */
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Puts it behind any text */
+
+    /* All the background rules moved here */
+    background-image: url(images/home.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 .intro h1 {
     font-size: 20px;
     margin-bottom: 20px;
@@ -659,29 +678,44 @@ footer {
     color: #555;
 }
 
-/* PASTE THIS IN ITS PLACE */
+/* --- CHANGED: MOBILE STYLES (Lines 724-760) --- */
 @media (max-width: 768px) {
 
-    /* --- THESE RULES MUST BE SEPARATE --- */
+    /* --- THESE RULES ARE REPLACED --- */
 
-    /* 1. This makes the hero image small on mobile */
+    /* 1. This makes the hero image small AND SWIPEABLE on mobile */
     section.intro {
         min-height: 60vh; 
+        overflow-x: scroll; /* <-- ALLOWS SWIPING */
+        
+        /* This part hides the ugly scrollbar */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    section.intro::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
     }
 
-    /* 2. This makes the image 'contain' on mobile */
-    .intro {
-        background-size: contain;  
-        background-color: #F3F3F2;  
+    /* 2. This makes the image WIDE on mobile */
+    .intro::before {
+        /* This is the trick! We make the image's width
+           proportional to its 60vh height.
+           This assumes your image has a 16:9 aspect ratio (16 / 9 = 1.7778).
+        */
+        width: calc(60vh * 1.7778); 
+        
+        /* Make sure background-size is 'cover' for this to work */
+        background-size: cover;
+        background-color: transparent; /* Remove old letterbox color */
     }
     
-    /* 3. This adjusts the transparent content box on mobile */
+    /* 3. This adjusts the transparent content box on mobile (Unchanged) */
     .main-content-wrapper {
         padding: 40px 20px;
         margin-top: -50px; /* This is your mobile overlap */
     }
 
-    /* 4. These are your other mobile styles */
+    /* 4. These are your other mobile styles (Unchanged) */
     .about-me-section h1 {
         font-size: 28px;
     }
