@@ -1321,3 +1321,385 @@ h3,
     background-color: #444;
   }
 }
+
+
+
+/* =====================================================
+   NEW: AIRNEST PORTFOLIO DETAILS
+===================================================== */
+
+.project-details {
+    /* This is the main container for all content *below* the hero */
+    background-color: #388E3C; 
+    padding: 100px 40px;
+}
+
+.project-details .content-wrapper {
+    /* A standard max-width container for readability */
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #f0f0f0;
+}
+
+/* --- Section Header (for "Main Services", "How We Start", etc.) --- */
+.project-details .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.project-details .section-header h2 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.project-details .section-header p {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- 1. Services Section (from 10.jpg) --- */
+.project-details .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.project-details .service-card {
+    background-color: #8bb97e; /* Match homepage cards */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-details .service-card h3 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.5rem;
+    color: #ffffff; /* Use the blue from the homepage */
+    margin-bottom: 15px;
+}
+
+.project-details .service-card p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* --- 2. Process Section (from 11.jpg) --- */
+.project-details .process-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.project-details .process-text h3 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.project-details .process-text p {
+    font-size: 1rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.project-details .process-image {
+    background-color: #333;
+    border-radius: 8px;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    place-items: center;
+    font-style: italic;
+    color: #888;
+    font-size: 1.2rem;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- 3. App Section (from 12.jpg) --- */
+.project-details .app-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.project-details .app-description h3 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.project-details .app-description p {
+    font-size: 1rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.project-details .app-description ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-details .app-description li {
+    position: relative;
+    padding-left: 30px;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-details .app-description li::before {
+    content: "✓";
+    color: #388E3C; /* AirNest Green */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+.project-details .app-image-gallery {
+    background-color: #333;
+    border-radius: 8px;
+    width: 100%;
+    height: 600px; /* Taller for app screens */
+    display: grid;
+    place-items: center;
+    font-style: italic;
+    color: #888;
+    font-size: 1.2rem;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Mobile Responsive for new sections --- */
+@media (max-width: 768px) {
+    .project-details {
+        padding: 60px 20px;
+    }
+
+    .project-details .services-grid {
+        grid-template-columns: 1fr; /* Stack cards */
+    }
+    
+    .project-details .process-section,
+    .project-details .app-section {
+        grid-template-columns: 1fr; /* Stack sections */
+    }
+    
+    /* Flip the app section on mobile so image is first */
+    .project-details .app-section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+/* =====================================================
+   NEW: AIRNEST PORTFOLIO DETAILS
+===================================================== */
+
+.project-details {
+    /* This is the main container for all content *below* the hero */
+    background-color: #388E3C; 
+    padding: 100px 40px;
+}
+
+.project-details .content-wrapper {
+    /* A standard max-width container for readability */
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #f0f0f0;
+}
+
+/* --- Section Header (for "Main Services", "How We Start", etc.) --- */
+.project-details .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.project-details .section-header h2 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.project-details .section-header p {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- 1. Services Section (from 10.jpg) --- */
+.project-details .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.project-details .service-card {
+    background-color: #8bb97e; /* Match homepage cards */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* <-- ADDED: To contain the image */
+}
+
+/* NEW: Style for the image inside the service card */
+.service-card-image {
+    width: calc(100% + 60px); /* 100% + 2 * padding */
+    margin: -30px -30px 20px -30px; /* Pulls image to edges */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-details .service-card h3 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.5rem;
+    color: #ffffff; 
+    margin-bottom: 15px;
+}
+
+.project-details .service-card p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* --- 2. Process Section (from 11.jpg) --- */
+.project-details .process-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.project-details .process-text h3 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.project-details .process-text p {
+    font-size: 1rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* UPDATED: Removed placeholder styles */
+.project-details .process-image {
+    width: 100%;
+}
+
+/* --- 3. App Section (from 12.jpg) --- */
+.project-details .app-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.project-details .app-description h3 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.project-details .app-description p {
+    font-size: 1rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.project-details .app-description ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-details .app-description li {
+    position: relative;
+    padding-left: 30px;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-details .app-description li::before {
+    content: "✓";
+    color: #ffffff; /* Brighter checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+/* UPDATED: Removed placeholder styles */
+.project-details .app-image-gallery {
+    width: 100%;
+}
+
+/* NEW: Styles for all images in this section */
+.project-details .process-image img,
+.project-details .app-image-gallery img,
+.project-details .deliverable-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === NEW DELIVERABLE SECTION === */
+.project-details .deliverable-gallery {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.project-details .deliverable-gallery img {
+    margin-bottom: 30px; /* Space between multiple deliverable images */
+}
+
+
+/* --- Mobile Responsive for new sections --- */
+@media (max-width: 768px) {
+    .project-details {
+        padding: 60px 20px;
+    }
+
+    .project-details .services-grid {
+        grid-template-columns: 1fr; /* Stack cards */
+    }
+    
+    .project-details .process-section,
+    .project-details .app-section {
+        grid-template-columns: 1fr; /* Stack sections */
+    }
+    
+    /* Flip the app section on mobile so image is first */
+    .project-details .app-section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
