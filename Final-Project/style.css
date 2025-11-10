@@ -1194,3 +1194,130 @@ h3,
   filter: brightness(1.2);
 }
 
+/* =====================================================
+   CONTACT PAGE DARK MODE
+===================================================== */
+.contact-page {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- Navbar --- */
+.contact-page .navbar .nav-links li a {
+  color: #e7e7e7;
+}
+.contact-page .navbar .nav-links li a.active {
+  color: #e7e7e7;
+  border-bottom-color: #e7e7e7;
+}
+.contact-page .navbar .nav-links:hover li a {
+  color: rgba(231, 231, 231, 0.5);
+}
+.contact-page .navbar .nav-links li a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* --- Header --- */
+.contact-page header {
+  border-color: #333 !important;
+}
+.contact-page header h1 {
+  color: #ffffff;
+}
+.contact-page header img {
+  border: 2px solid #555;
+}
+
+/* --- Form Section --- */
+.contact-page .form-section {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-page label {
+  color: #f0f0f0;
+}
+
+.contact-page .number {
+  color: #64b5f6;
+}
+
+.contact-page .form-input,
+.contact-page .single-line-textarea {
+  border-bottom: 1px solid #444;
+  color: #f0f0f0;
+}
+
+.contact-page .form-input::placeholder,
+.contact-page .single-line-textarea::placeholder {
+  color: #777;
+}
+
+.contact-page .form-input:focus,
+.contact-page .single-line-textarea:focus {
+  border-color: #f0f0f0;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+/* --- Submit Button --- */
+.contact-page .submit-button {
+  background-color: #7c7c7c;
+  color: #f0f0f0;
+  border: 1px solid #555;
+  transition: all 0.3s ease;
+}
+.contact-page .submit-button:hover {
+  background-color: #f0f0f0;
+  color: #121212;
+  border-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Sidebar / Details Section --- */
+.contact-page .details-section {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.contact-page .details-section h3 {
+  color: #999;
+}
+.contact-page .details-section p,
+.contact-page .details-section a {
+  color: #c0c0c0;
+}
+.contact-page .details-section a:hover {
+  color: #ffffff;
+}
+
+/* --- Footer --- */
+.contact-page footer {
+  color: #777;
+  border-top: 1px solid #333;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .contact-page #hamburger-btn span {
+    background-color: #e7e7e7;
+  }
+
+  .contact-page .nav-menu {
+    background-color: #2e2b2a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .contact-page .nav-menu .nav-links li a {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+
+  .contact-page .nav-menu .nav-links li a:hover {
+    background-color: #444;
+  }
+}
