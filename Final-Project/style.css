@@ -122,22 +122,18 @@ main {
 /* --- END FINAL NAVBAR STYLES --- */
 
 
-/* --- CHANGED (Lines 134-138) --- */
+/* --- CHANGED --- */
 section.intro {
     min-height: 100vh;
-    position: relative; /* <-- ADDED: To contain the ::before element */
-    overflow: hidden;   /* <-- ADDED: Hides overflow on desktop */
+    position: relative; 
+    overflow: hidden;   
+    /* Removed flex properties as content is gone */
 }
 
-/* --- CHANGED (Lines 140-147) --- */
 .intro {
-    text-align: left;
-    /* All background-image properties have been
-       REMOVED from here and moved to .intro::before
-    */
+    /* text-align: left; <-- Removed */
 }
 
-/* --- NEW RULE (Lines 149-164) --- */
 .intro::before {
     content: "";
     position: absolute;
@@ -145,9 +141,8 @@ section.intro {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Puts it behind any text */
+    z-index: -1; 
 
-    /* All the background rules moved here */
     background-image: url(images/home.jpg);
     background-size: cover;
     background-position: center;
@@ -519,16 +514,17 @@ footer {
 
 /* --- NEW HOME PAGE CONTENT STYLES --- */
 
+/* --- CHANGED --- */
 .main-content-wrapper {
     padding: 80px 50px; 
     max-width: 1200px; 
     margin: 0 auto; 
-    background-color: transparent; 
+    /* background-color: transparent; <-- REMOVED */
     margin-top: -100px; 
     position: relative; 
     z-index: 2; 
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
-    border-radius: 8px; 
+    /* box-shadow: 0 4px 20px rgba(0,0,0,0.05); <-- REMOVED */
+    /* border-radius: 8px; <-- REMOVED */
 }
 
 /* Styling for your existing 'About Me' section */
@@ -678,44 +674,30 @@ footer {
     color: #555;
 }
 
-/* --- CHANGED: MOBILE STYLES (Lines 724-760) --- */
+/* --- MOBILE STYLES (Unchanged) --- */
 @media (max-width: 768px) {
 
-    /* --- THESE RULES ARE REPLACED --- */
-
-    /* 1. This makes the hero image small AND SWIPEABLE on mobile */
     section.intro {
         min-height: 60vh; 
-        overflow-x: scroll; /* <-- ALLOWS SWIPING */
-        
-        /* This part hides the ugly scrollbar */
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        overflow-x: scroll; 
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
     }
     section.intro::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
+        display: none;
     }
 
-    /* 2. This makes the image WIDE on mobile */
     .intro::before {
-        /* This is the trick! We make the image's width
-           proportional to its 60vh height.
-           This assumes your image has a 16:9 aspect ratio (16 / 9 = 1.7778).
-        */
         width: calc(60vh * 1.7778); 
-        
-        /* Make sure background-size is 'cover' for this to work */
         background-size: cover;
-        background-color: transparent; /* Remove old letterbox color */
+        background-color: transparent;
     }
     
-    /* 3. This adjusts the transparent content box on mobile (Unchanged) */
     .main-content-wrapper {
         padding: 40px 20px;
-        margin-top: -50px; /* This is your mobile overlap */
+        margin-top: -50px; 
     }
 
-    /* 4. These are your other mobile styles (Unchanged) */
     .about-me-section h1 {
         font-size: 28px;
     }
@@ -728,7 +710,7 @@ footer {
         gap: 30px;
     }
 }
-/* --- END OF THE CORRECTED BLOCK --- */
+/* --- END OF MOBILE BLOCK --- */
 /* --- NEW HEADING FONT --- */
 h1,
 h2,
@@ -768,7 +750,7 @@ h3,
 .tag-hovered {
     transform: scale(1.1);
     background-color: var(--dark-brown) !important; 
-    color: #F3F3F2 !important; 
+    color: #F3F32 !important; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -859,6 +841,15 @@ h3,
 .input-error {
     border-bottom-color: #D32F2F !important; 
 }
+
+/* --- NEW: Hero Intro Content Styles --- */
+/* --- REMOVED: All rules from here are moved to the dark mode block --- */
+.intro-content { }
+.intro-content h1 { }
+.intro-content p { }
+.intro-links { }
+.intro-link { }
+.intro-link:hover { }
 
 /* --- 最终版：响应式导航栏样式 --- */
 
@@ -954,5 +945,183 @@ h3,
     
     .startup-page .nav-menu .nav-links li a.active {
         color:black; 
+    }
+}
+
+
+/* =====================================================
+--- NEW: HOMEPAGE DARK MODE OVERRIDES ---
+=====================================================
+*/
+
+/* --- 1. Body & General --- */
+.home-page {
+    background-color: #121212;
+}
+
+/* --- 2. Navbar (Desktop) --- */
+.home-page .navbar .nav-links li a {
+    color: var(--light-brown);
+}
+.home-page .navbar .nav-links li a.active {
+    color: var(--light-brown);
+    border-bottom-color: var(--light-brown);
+}
+.home-page .navbar .nav-links:hover li a {
+    color: rgba(231, 231, 231, 0.5);
+}
+.home-page .navbar .nav-links:hover li a.active {
+    color: rgba(231, 231, 231, 0.5);
+    border-bottom-color: rgba(231, 231, 231, 0.5);
+}
+.home-page .navbar .nav-links li a:hover,
+.home-page .navbar .nav-links li a.active:hover {
+    color: var(--light-brown);
+    border-bottom-color: var(--light-brown);
+}
+
+/* --- 3. Hero Intro Text (MOVED) --- */
+.home-page .intro-content {
+    padding-bottom: 60px; /* Space between intro and first cards */
+    text-align: left;
+}
+.home-page .intro-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #f0f0f0; 
+    margin-bottom: 2rem;
+    text-shadow: none; /* Removed shadow */
+    max-width: 75ch;
+}
+.home-page .intro-links {
+    display: flex;
+    justify-content: flex-start; /* Align left */
+    gap: 20px;
+}
+.home-page .intro-link {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #555; /* Darker border */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.home-page .intro-link:hover {
+    background-color: #f0f0f0;
+    color: #121212;
+    border-color: #f0f0f0;
+}
+
+
+/* --- 4. Main Content Wrapper --- */
+.home-page .main-content-wrapper {
+    box-shadow: none; /* Removed shadow from main wrapper */
+}
+
+.home-page .main-content-wrapper h2 {
+    color: #f0f0f0;
+    border-bottom: none; /* Remove border from heading */
+    padding-bottom: 0;
+    margin-bottom: 20px; /* Add margin back */
+}
+
+/* --- 5. General Text & Links --- */
+.home-page .main-content-wrapper p,
+.home-page .main-content-wrapper li,
+.home-page .main-content-wrapper .description {
+    color: #c0c0c0;
+}
+.home-page .education .entry .description, 
+.home-page .experience .entry .description, 
+.home-page .activities .entry .description,
+.home-page .skills p, .home-page .languages p {
+    color: #c0c0c0;
+}
+.home-page .experience .entry ul {
+    color: #a0a0a0;
+}
+.home-page .black-link {
+    color: #e0e0e0;
+}
+.home-page .highlight-link {
+    color: #64b5f6; /* Light blue */
+}
+
+/* --- 6. Sections (Card Parents) --- */
+.home-page .education-experience,
+.home-page .skills-activities-hobbies {
+    border-top: none; /* Remove old border */
+    padding-top: 0;
+}
+.home-page .education .entry .year, 
+.home-page .experience .entry .year, 
+.home-page .activities .entry .year {
+    color: #f0f0f0;
+}
+
+/* --- 7. NEW CARD STYLES --- */
+.home-page .education,
+.home-page .experience,
+.home-page .skills,
+.home-page .software-tools,
+.home-page .languages,
+.home-page .hobbies,
+.home-page .activities {
+    background-color: #1e1e1e; /* Lighter dark */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Disable old hover effect on experience entry */
+.home-page .experience .entry {
+    padding: 0; /* Remove old padding */
+    border: none;
+    margin-bottom: 30px; /* Re-add margin */
+}
+.home-page .experience-hovered {
+    background-color: transparent; /* Disable hover */
+    border-color: transparent;
+    box-shadow: none;
+    transform: none;
+    cursor: default;
+}
+
+
+/* --- 8. Tags (Unchanged) --- */
+.home-page .tool-list span, 
+.home-page .hobby-list span {
+    background-color: #333;
+    color: #e0e0e0;
+}
+.home-page .tag-hovered {
+    background-color: #e0e0e0 !important;
+    color: #121212 !important;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* --- 9. Footer --- */
+.home-page footer {
+    color: #777;
+    border-top: 1px solid #333;
+}
+
+/* --- 10. Mobile Menu --- */
+@media (max-width: 768px) {
+    .home-page #hamburger-btn span {
+        background-color: var(--light-brown);
+    }
+    .home-page .nav-menu {
+        background-color: #2e2b2a;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
+    }
+    .home-page .nav-menu .nav-links li a {
+        background-color: #333;
+        color: #f0f0f0;
+    }
+    .home-page .nav-menu .nav-links li a:hover {
+        background-color: #444; 
     }
 }
