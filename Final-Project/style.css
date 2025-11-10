@@ -1106,3 +1106,91 @@ h3,
         background-color: #444; 
     }
 }
+
+/* =====================================================
+   PROJECTS PAGE DARK MODE
+===================================================== */
+.projects-page {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Navbar */
+.projects-page .navbar .nav-links li a {
+  color: #e7e7e7;
+}
+.projects-page .navbar .nav-links li a.active {
+  color: #e7e7e7;
+  border-bottom-color: #e7e7e7;
+}
+.projects-page .navbar .nav-links:hover li a {
+  color: rgba(231, 231, 231, 0.5);
+}
+.projects-page .navbar .nav-links li a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* Main projects layout */
+.projects-page .new-projects-page {
+  background-color: transparent;
+}
+
+.projects-page .project-entry {
+  align-items: center;
+  gap: 2rem;
+}
+
+.projects-page .project-text h3 {
+  color: #ffffff;
+}
+
+.projects-page .project-text p {
+  color: #c0c0c0;
+}
+
+.projects-page .cta-link {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+.projects-page .cta-link:hover {
+  background-color: #f0f0f0;
+  color: #121212;
+  border-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Image cards */
+.projects-page .project-image img {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
+}
+
+/* Footer */
+.projects-page footer {
+  color: #777;
+  border-top: 1px solid #333;
+}
+
+/* Mobile menu for dark theme */
+@media (max-width: 768px) {
+  .projects-page #hamburger-btn span {
+    background-color: #e7e7e7;
+  }
+  .projects-page .nav-menu {
+    background-color: #2e2b2a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+  .projects-page .nav-menu .nav-links li a {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  .projects-page .nav-menu .nav-links li a:hover {
+    background-color: #444;
+  }
+}
+
+.projects-page .project-entry:nth-child(4) .project-image img {
+  filter: brightness(1.2);
+}
+
