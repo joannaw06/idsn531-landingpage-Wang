@@ -130,9 +130,6 @@ section.intro {
     /* Removed flex properties as content is gone */
 }
 
-.intro {
-    /* text-align: left; <-- Removed */
-}
 
 .intro::before {
     content: "";
@@ -750,7 +747,7 @@ h3,
 .tag-hovered {
     transform: scale(1.1);
     background-color: var(--dark-brown) !important; 
-    color: #F3F32 !important; 
+    color: #F3F3F2 !important; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -841,15 +838,6 @@ h3,
 .input-error {
     border-bottom-color: #D32F2F !important; 
 }
-
-/* --- NEW: Hero Intro Content Styles --- */
-/* --- REMOVED: All rules from here are moved to the dark mode block --- */
-.intro-content { }
-.intro-content h1 { }
-.intro-content p { }
-.intro-links { }
-.intro-link { }
-.intro-link:hover { }
 
 /* --- 最终版：响应式导航栏样式 --- */
 
@@ -980,22 +968,21 @@ h3,
     border-bottom-color: var(--light-brown);
 }
 
-/* --- 3. Hero Intro Text (MOVED) --- */
 .home-page .intro-content {
-    padding-bottom: 60px; /* Space between intro and first cards */
-    text-align: left;
+    padding-bottom: 60px; 
+    text-align: center;
 }
 .home-page .intro-content p {
     font-size: 1.125rem;
     line-height: 1.7;
     color: #f0f0f0; 
     margin-bottom: 2rem;
-    text-shadow: none; /* Removed shadow */
+    text-shadow: none; 
     max-width: 75ch;
 }
 .home-page .intro-links {
     display: flex;
-    justify-content: flex-start; /* Align left */
+    justify-content: center; 
     gap: 20px;
 }
 .home-page .intro-link {
@@ -1004,7 +991,7 @@ h3,
     font-weight: bold;
     font-size: 1rem;
     padding: 10px 20px;
-    border: 2px solid #555; /* Darker border */
+    border: 2px solid #555; 
     border-radius: 5px;
     transition: all 0.3s ease;
 }
@@ -1017,14 +1004,14 @@ h3,
 
 /* --- 4. Main Content Wrapper --- */
 .home-page .main-content-wrapper {
-    box-shadow: none; /* Removed shadow from main wrapper */
+    box-shadow: none; 
 }
 
 .home-page .main-content-wrapper h2 {
     color: #f0f0f0;
-    border-bottom: none; /* Remove border from heading */
+    border-bottom: none; 
     padding-bottom: 0;
-    margin-bottom: 20px; /* Add margin back */
+    margin-bottom: 20px; 
 }
 
 /* --- 5. General Text & Links --- */
@@ -1046,13 +1033,13 @@ h3,
     color: #e0e0e0;
 }
 .home-page .highlight-link {
-    color: #64b5f6; /* Light blue */
+    color: #64b5f6; 
 }
 
 /* --- 6. Sections (Card Parents) --- */
 .home-page .education-experience,
 .home-page .skills-activities-hobbies {
-    border-top: none; /* Remove old border */
+    border-top: none; 
     padding-top: 0;
 }
 .home-page .education .entry .year, 
@@ -1069,28 +1056,26 @@ h3,
 .home-page .languages,
 .home-page .hobbies,
 .home-page .activities {
-    background-color: #1e1e1e; /* Lighter dark */
+    background-color: #1e1e1e; 
     border-radius: 8px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Disable old hover effect on experience entry */
 .home-page .experience .entry {
-    padding: 0; /* Remove old padding */
+    padding: 0; 
     border: none;
-    margin-bottom: 30px; /* Re-add margin */
+    margin-bottom: 30px; 
 }
 .home-page .experience-hovered {
-    background-color: transparent; /* Disable hover */
+    background-color: transparent; 
     border-color: transparent;
     box-shadow: none;
     transform: none;
     cursor: default;
 }
 
-
-/* --- 8. Tags (Unchanged) --- */
+/* --- 8. Tags --- */
 .home-page .tool-list span, 
 .home-page .hobby-list span {
     background-color: #333;
