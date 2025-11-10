@@ -984,6 +984,11 @@ h3,
     margin-left: auto;
     margin-right: auto;
 }
+
+.home-page .main-content-wrapper .intro-content p {
+  color: #f1f1f1;
+}
+
 .home-page .intro-links {
     display: flex;
     justify-content: center; 
