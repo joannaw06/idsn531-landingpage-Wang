@@ -597,20 +597,6 @@ footer {
     max-width: 100%; 
 }
 
-.education-experience {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 40px; 
-    margin-bottom: 60px;
-    border-top: 1px solid #eee; 
-    padding-top: 40px;
-}
-
-.education, .experience {
-    flex: 1; 
-    min-width: 300px; 
-}
-
 .education .entry, .experience .entry, .activities .entry {
     margin-bottom: 30px;
 }
@@ -641,13 +627,11 @@ footer {
     line-height: 1.4;
 }
 
-.skills-activities-hobbies {
+.info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-template-columns: repeat(3, 1fr); 
     gap: 40px; 
     margin-bottom: 60px;
-    border-top: 1px solid #eee; 
-    padding-top: 40px;
 }
 
 .tool-list, .hobby-list {
@@ -698,16 +682,15 @@ footer {
     .about-me-section h1 {
         font-size: 28px;
     }
-    .education-experience {
-        flex-direction: column;
-        gap: 20px;
+
+    .info-grid {
+    grid-template-columns: 1fr; 
+    gap: 30px;
     }
-    .skills-activities-hobbies {
-        grid-template-columns: 1fr; 
-        gap: 30px;
-    }
+
 }
-/* --- END OF MOBILE BLOCK --- */
+
+
 /* --- NEW HEADING FONT --- */
 h1,
 h2,
@@ -1047,8 +1030,7 @@ h3,
 }
 
 /* --- 6. Sections (Card Parents) --- */
-.home-page .education-experience,
-.home-page .skills-activities-hobbies {
+.home-page .info-grid {
     border-top: none; 
     padding-top: 0;
 }
@@ -1070,6 +1052,10 @@ h3,
     border-radius: 8px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home-page .experience {
+    margin-bottom: 40px; 
 }
 
 .home-page .experience .entry {
